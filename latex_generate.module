@@ -6,17 +6,10 @@
  */
 
 /**
- * Implements hook_permission().
+ * Implements hook_perm().
  */
-function latex_generate_permission() {
-  $return = array();
-
-  $return['latex generate'] = array(
-    'title' => t('Generate LaTeX template'),
-    'description' => t('Allow user to use LaTeX template generation form.'),
-  );
-
-  return $return;
+function latex_generate_perm() {
+  return array('latex generate');
 }
 
 /**
