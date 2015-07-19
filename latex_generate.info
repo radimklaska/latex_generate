@@ -1,0 +1,9 @@
+name = LaTeX generate
+description = Generates LaTeX templates based on user input.
+package = LaTeX
+core = 7.x
+version = 7.x-1.x
+
+dependencies[] = date_api
+dependencies[] = date_popup
+dependencies[] = transliteration
