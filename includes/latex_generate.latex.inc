@@ -109,10 +109,10 @@ function latex_generate_input_handle_pdf($filename, $data) {
   }
 
   // Generate PDF.
-  $result = shell_exec('pdflatex ' . drupal_realpath($file->uri));
+  $result = shell_exec('pdflatex -output-directory="' . drupal_realpath($path) . '" ' . drupal_realpath($file->uri));
 
   // Check PDF.
-  if (!(strpos($result, 'Output written on ' . $filename . '.pdf') != FALSE)) {
+  if (!(strpos($result, 'Output written on ') != FALSE)) {
     // Something went wrong. Fallback to .tex.
     return $file;
   }
